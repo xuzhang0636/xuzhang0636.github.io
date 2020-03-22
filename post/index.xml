@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Robert Blog</title>
+    <link>https://xuzhang0636.github.io/post/</link>
+    <description>Recent content in Posts on Robert Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 22 Mar 2020 16:08:21 +0800</lastBuildDate>
+    
+	<atom:link href="https://xuzhang0636.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring Boot, JPA, Mysql, Lombok整合</title>
+      <link>https://xuzhang0636.github.io/post/spring-boot-jpa-mysql-lombok/</link>
+      <pubDate>Sun, 22 Mar 2020 16:08:21 +0800</pubDate>
+      
+      <guid>https://xuzhang0636.github.io/post/spring-boot-jpa-mysql-lombok/</guid>
+      <description>创建Spring Boot项目，并添加相应的依赖 创建该项目分为如下几步： 进入Spring Initializr,填写相应信息，具体怎么填写，可以</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot, Mybatis, Mysql, Lombok整合</title>
+      <link>https://xuzhang0636.github.io/post/spring-boot-mybatis-mysql-lombok/</link>
+      <pubDate>Sat, 21 Mar 2020 18:44:11 +0800</pubDate>
+      
+      <guid>https://xuzhang0636.github.io/post/spring-boot-mybatis-mysql-lombok/</guid>
+      <description>创建Spring Boot项目，并添加相应的依赖 创建该项目分为如下几步： 进入Spring Initializr,填写相应信息，具体怎么填写，可以</description>
+    </item>
+    
+    <item>
+      <title>Java多线程学习之Volatile</title>
+      <link>https://xuzhang0636.github.io/post/java-multiple-thread-volatile/</link>
+      <pubDate>Sat, 21 Mar 2020 14:13:57 +0800</pubDate>
+      
+      <guid>https://xuzhang0636.github.io/post/java-multiple-thread-volatile/</guid>
+      <description>什么是Volatile volatile是轻量级的synchronized,它在多处理器开发中保证了共享变量的“可见性”。 Volatile的实</description>
+    </item>
+    
+    <item>
+      <title>Java多线程学习计划Plan</title>
+      <link>https://xuzhang0636.github.io/post/multiple-thread-plan/</link>
+      <pubDate>Sat, 21 Mar 2020 14:09:21 +0800</pubDate>
+      
+      <guid>https://xuzhang0636.github.io/post/multiple-thread-plan/</guid>
+      <description>Volatile的原理 Synchronized的原理与应用 原子操作的实现原理</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot 简单的Rest服务创建</title>
+      <link>https://xuzhang0636.github.io/post/spring-boot-simple-rest/</link>
+      <pubDate>Sat, 21 Mar 2020 12:53:04 +0800</pubDate>
+      
+      <guid>https://xuzhang0636.github.io/post/spring-boot-simple-rest/</guid>
+      <description>生成Spring Boot项目 如何生成一个Spring Boot项目呢？ 有以下两种办法： 第一种是去Spring Initializr 第二种是在idea中生成（针对的</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot Plan</title>
+      <link>https://xuzhang0636.github.io/post/spring-boot-plan/</link>
+      <pubDate>Wed, 18 Mar 2020 21:23:00 +0800</pubDate>
+      
+      <guid>https://xuzhang0636.github.io/post/spring-boot-plan/</guid>
+      <description>简介 因为最近在项目中用到了很多Spring Boot的东西，所以想写一些常用的东西做一下对最近所学的总结 计划 Spring Boot 构建你的第一个RestAPI Spring</description>
+    </item>
+    
+    <item>
+      <title>Remove if Else</title>
+      <link>https://xuzhang0636.github.io/post/remove-if-else/</link>
+      <pubDate>Wed, 18 Mar 2020 20:48:57 +0800</pubDate>
+      
+      <guid>https://xuzhang0636.github.io/post/remove-if-else/</guid>
+      <description>整体概览 最近在做项目开发的时候，有时候在项目中碰见稍微复杂一点的逻辑，就会出现很多的if-else，当时就在想，有没有什么方法？能够帮助我们</description>
+    </item>
+    
+  </channel>
+</rss>

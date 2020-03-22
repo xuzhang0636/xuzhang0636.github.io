@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Spring Boot, JPA, Mysql, Lombok整合 - Robert Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Robert Xu" /><meta name="description" content="创建Spring Boot项目，并添加相应的依赖 创建该项目分为如下几步： 进入Spring Initializr,填写相应信息，具体怎么填写，可以" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.64.0 with theme even" />
+
+
+<link rel="canonical" href="https://xuzhang0636.github.io/post/spring-boot-jpa-mysql-lombok/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Spring Boot, JPA, Mysql, Lombok整合" />
+<meta property="og:description" content="创建Spring Boot项目，并添加相应的依赖 创建该项目分为如下几步： 进入Spring Initializr,填写相应信息，具体怎么填写，可以" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xuzhang0636.github.io/post/spring-boot-jpa-mysql-lombok/" />
+<meta property="article:published_time" content="2020-03-22T16:08:21+08:00" />
+<meta property="article:modified_time" content="2020-03-22T16:08:21+08:00" />
+<meta itemprop="name" content="Spring Boot, JPA, Mysql, Lombok整合">
+<meta itemprop="description" content="创建Spring Boot项目，并添加相应的依赖 创建该项目分为如下几步： 进入Spring Initializr,填写相应信息，具体怎么填写，可以">
+<meta itemprop="datePublished" content="2020-03-22T16:08:21&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-22T16:08:21&#43;08:00" />
+<meta itemprop="wordCount" content="630">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spring Boot, JPA, Mysql, Lombok整合"/>
+<meta name="twitter:description" content="创建Spring Boot项目，并添加相应的依赖 创建该项目分为如下几步： 进入Spring Initializr,填写相应信息，具体怎么填写，可以"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Robert Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Robert Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Spring Boot, JPA, Mysql, Lombok整合</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-03-22 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#创建spring-boot项目并添加相应的依赖">创建Spring Boot项目，并添加相应的依赖</a></li>
+    <li><a href="#利用docker创建mysql数据库">利用Docker创建MySQL数据库</a>
+      <ul>
+        <li><a href="#如何安装docker">如何安装Docker</a></li>
+        <li><a href="#在docker中创建mysql数据库">在Docker中创建MySQL数据库</a></li>
+      </ul>
+    </li>
+    <li><a href="#配置jpa相关的依赖注解版本">配置JPA相关的依赖(注解版本)</a></li>
+    <li><a href="#测试">测试</a></li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="创建spring-boot项目并添加相应的依赖">创建Spring Boot项目，并添加相应的依赖</h2>
+<p>创建该项目分为如下几步：</p>
+<ul>
+<li>进入<a href="https://start.spring.io/">Spring Initializr</a>,填写相应信息，具体怎么填写，可以参照我的<a href="../spring-boot-simple-rest">上一篇博文</a></li>
+<li>添加相应的Dependencies
+<ul>
+<li>Spring Web</li>
+<li>Lombok</li>
+<li>MySQL Driver</li>
+<li>Spring Data JPA</li>
+</ul>
+</li>
+<li>点击Generate下载</li>
+</ul>
+<p><img src="/spring-boot-jpa-mysql-lombok-1.png" alt="image"></p>
+<h2 id="利用docker创建mysql数据库">利用Docker创建MySQL数据库</h2>
+<h3 id="如何安装docker">如何安装Docker</h3>
+<p>关于如何安装Docker，我这里就不详述了，参考Docker官网的<a href="https://docs.docker.com/install/">安装教程</a></p>
+<h3 id="在docker中创建mysql数据库">在Docker中创建MySQL数据库</h3>
+<p>步骤如下：</p>
+<ul>
+<li>docker pull mysql:latest</li>
+<li>利用docker images | grep mysql查看镜像是否下载成功
+<img src="/spring-boot-mybatis-mysql-lombok-2.png" alt="image"></li>
+<li>启动mysql</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ docker run -itd --name mysql -p 3306:3306 -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span><span class="o">[</span>your password<span class="o">]</span> mysql
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="配置jpa相关的依赖注解版本">配置JPA相关的依赖(注解版本)</h2>
+<ul>
+<li>第一步，进入application.properties配置数据源，配置信息如下</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># mysql url
+spring.datasource.url=jdbc:mysql://localhost:3306/robert 
+# mysql username
+spring.datasource.username=root
+# mysql password
+spring.datasource.password=robert
+# mysql Driver
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>第二步，创建User.java类,放入model包中,这里，利用了Lombok注解，我随后会写一篇文章对这个插件进行详细的描述</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Data</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;users&#34;</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">User</span> <span class="o">{</span>
+    <span class="nd">@Id</span>
+    <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">GenerationType</span><span class="o">.</span><span class="na">IDENTITY</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">id</span><span class="o">;</span>
+    <span class="nd">@Column</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">username</span><span class="o">;</span>
+    <span class="nd">@Column</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">password</span><span class="o">;</span>
+    <span class="nd">@Column</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">phone</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>第三步，创建UserRepository,放入repository包中</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserRepository</span> <span class="kd">extends</span> <span class="n">JpaRepository</span><span class="o">&lt;</span><span class="n">User</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="o">{</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="测试">测试</h2>
+<p>编写测试类来测试代码的正确性</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@SpringBootTest</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestUserRepository</span> <span class="o">{</span>
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserRepository</span> <span class="n">userRepository</span><span class="o">;</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">smokeTest</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Assertions</span><span class="o">.</span><span class="na">assertNotNull</span><span class="o">(</span><span class="n">userRepository</span><span class="o">)</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">insertTest</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="n">User</span><span class="o">(</span><span class="o">)</span><span class="o">;</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setPassword</span><span class="o">(</span><span class="s">&#34;robert&#34;</span><span class="o">)</span><span class="o">;</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setPhone</span><span class="o">(</span><span class="s">&#34;134xxxxxxxx&#34;</span><span class="o">)</span><span class="o">;</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setUsername</span><span class="o">(</span><span class="s">&#34;robert&#34;</span><span class="o">)</span><span class="o">;</span>
+        <span class="n">userRepository</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">user</span><span class="o">)</span><span class="o">;</span>
+
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">selectTest</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Assertions</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span><span class="n">2</span><span class="o">,</span> <span class="n">userRepository</span><span class="o">.</span><span class="na">findAll</span><span class="o">(</span><span class="o">)</span><span class="o">.</span><span class="na">size</span><span class="o">(</span><span class="o">)</span><span class="o">)</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span><span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="总结">总结</h2>
+<p>OK，到了这里，我们对SpringBoot,Mybatis,Lombok,Mysql的整合已经完成，代码奉上，<a href="https://github.com/xuzhang0636/spring-boot-jpa-mysql-lombok">代码地址</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Robert Xu</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-03-22
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/spring-boot-mybatis-mysql-lombok/">
+            <span class="next-text nav-default">Spring Boot, Mybatis, Mysql, Lombok整合</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:363854939@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/xuzhang0636" class="iconfont icon-github" title="github"></a>
+  <a href="https://xuzhang0636.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Robert Xu</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

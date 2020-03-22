@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://xuzhang0636.github.io/sitemap.xml

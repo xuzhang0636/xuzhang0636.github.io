@@ -1,0 +1,79 @@
+<?xml-stylesheet type="text/xsl" href="https://xuzhang0636.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://xuzhang0636.github.io/post/</loc>
+    <lastmod>2020-03-22T16:08:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuzhang0636.github.io/</loc>
+    <lastmod>2020-03-22T16:08:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuzhang0636.github.io/post/spring-boot-jpa-mysql-lombok/</loc>
+    <lastmod>2020-03-22T16:08:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuzhang0636.github.io/post/spring-boot-mybatis-mysql-lombok/</loc>
+    <lastmod>2020-03-21T18:44:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuzhang0636.github.io/post/java-multiple-thread-volatile/</loc>
+    <lastmod>2020-03-21T14:13:57+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuzhang0636.github.io/post/multiple-thread-plan/</loc>
+    <lastmod>2020-03-21T14:09:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuzhang0636.github.io/post/spring-boot-simple-rest/</loc>
+    <lastmod>2020-03-21T12:53:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuzhang0636.github.io/post/spring-boot-plan/</loc>
+    <lastmod>2020-03-18T21:23:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuzhang0636.github.io/post/remove-if-else/</loc>
+    <lastmod>2020-03-18T20:48:57+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuzhang0636.github.io/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuzhang0636.github.io/tags/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
